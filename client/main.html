@@ -1,0 +1,48 @@
+<head>
+    <title>LightspeedHQ pricing</title>
+</head>
+
+<body>
+<h1>LightspeedHQ pricing</h1>
+
+{{> pricing}}
+</body>
+
+<template name="pricing">
+    <h2>Prices</h2>
+    <div>
+        {{#each tld_data}}
+        <h3>{{locale}}</h3>
+        <ul>
+            {{#each products}}
+            <li>Product name: {{name}}</li>
+            <li>Tagline: {{tagline}}</li>
+            <li>Currency type: {{currency.type}}</li>
+            <li>Currency symbol: {{currency.symbol}}</li>
+            <li>Subscriptions:
+                <ul>
+                    {{#each subscriptions}}
+                    <li>Type: {{type}}</li>
+                    {{#if popular}}
+                    <li>Popular: true</li>
+                    {{else}}
+                    <li>Popular: false</li>
+                    {{/if}}
+                    <li>Tagline: {{tagline}}</li>
+                    <li>Price (monthly): {{pricing.month}}</li>
+                    <li>Price (annual): {{pricing.annual}}</li>
+                    <li>Features:
+                        <ul>
+                            {{#each features}}
+                            <li>{{{feature}}}</li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{/each}}
+        </ul>
+        {{/each}}
+    </div>
+</template>
