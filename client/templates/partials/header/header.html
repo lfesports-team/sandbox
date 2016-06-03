@@ -1,0 +1,19 @@
+<template name="Header">
+    <header class="layout--large">
+        <div>
+            {{> LightspeedLogo}}
+        </div>
+        <nav>
+            <ul class="nav-primary">
+                <li class="nav-primary__item"><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+                <li class="nav-primary__item nav-primary__item--withsub"><a href="/pricing/"><i
+                        class="fa fa-dollar"></i>Pricing</a>
+                    <ul class="subnav-primary">
+                        <li class="subnav-primary__item"><a href="/pricing/add/">Add</a></li>
+                    </ul>
+                </li>
+                <li class="nav-primary__item"><i class="fa fa-user"></i>{{> loginButtons}}</li>
+            </ul>
+        </nav>
+    </header>
+</template>

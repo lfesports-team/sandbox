@@ -1,2 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Lightspeed } from '../collections/lightspeed/Lightspeed';
+
+Meteor.publish('lightspeed', function() {
+  return Lightspeed.find();
+});

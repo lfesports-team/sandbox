@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html,
+body,
+#__blaze-root {
+  min-height: 100vh;
+}
+
+body {
+  font-size: 10px;
+}
+
+#__blaze-root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  background-color: #e1e1e1;
+}
+
+li {
+  list-style-type: none;
+}
+
+.view-title {
+  font-size: 3rem;
+}

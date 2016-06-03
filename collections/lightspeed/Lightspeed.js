@@ -1,6 +1,13 @@
 import {LightspeedSchema} from './schemas/lightspeed.js';
 
 Lightspeed = new Meteor.Collection('lightspeed');
+
+Lightspeed.allow({
+  insert(userId, doc) {
+    return !!userId;
+  }
+});
+
 Lightspeed.attachSchema(LightspeedSchema());
 
 // var lightspeed = [

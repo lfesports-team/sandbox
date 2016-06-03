@@ -1,0 +1,14 @@
+// General styles
+@import 'assets/scss/variables';
+@import 'assets/scss/base';
+@import 'assets/scss/layout';
+
+
+// Everywhere components
+@import 'templates/partials/header/header';
+
+
+// Pricing components
+@import 'templates/pricing/pricing-add/pricing-add';
+@import 'templates/pricing/products/product';
+@import 'templates/pricing/subscriptions/subscription';
