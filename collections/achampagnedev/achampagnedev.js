@@ -1,14 +1,14 @@
-import {LightspeedSchema} from './schemas/lightspeed.js';
+import {AchampagneDevSchema} from './schemas/achampagnedev.js';
 
-Lightspeed = new Meteor.Collection('lightspeed');
+AchampagneDev = new Meteor.Collection('achampagnedev');
 
-Lightspeed.allow({
+AchampagneDev.allow({
   insert(userId, doc) {
     return !!userId;
   }
 });
 
-Lightspeed.attachSchema(LightspeedSchema());
+AchampagneDev.attachSchema(AchampagneDevSchema());
 
 // var lightspeed = [
 //   {

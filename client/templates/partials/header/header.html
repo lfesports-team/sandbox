@@ -1,8 +1,6 @@
 <template name="Header">
     <header class="layout--large">
-        <div>
-            {{> LightspeedLogo}}
-        </div>
+        <h1><a href="/">ACHAMPAGNEDEV</a></h1>
         <nav>
             <ul class="nav-primary">
                 <li class="nav-primary__item"><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
@@ -12,7 +10,7 @@
                         <li class="subnav-primary__item"><a href="/pricing/add/">Add</a></li>
                     </ul>
                 </li>
-                <li class="nav-primary__item"><i class="fa fa-user"></i>{{> loginButtons}}</li>
+                <li class="nav-primary__item nav-login"><i class="fa fa-user"></i>{{> loginButtons}}</li>
             </ul>
         </nav>
     </header>

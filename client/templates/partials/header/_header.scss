@@ -2,31 +2,35 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 1.2rem;
-
-  .lightspeed-logo {
-    width: 192px;
-
-    &__flame {
-      fill: $c-pri;
-    }
-  }
+  padding-bottom: 1.2rem;
 
   nav {
+    padding-top: .25rem;
 
     .nav-primary {
       display: flex;
+      align-items: center;
 
       &__item {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        margin-left: 4rem;
+        text-transform: uppercase;
 
         &--withsub {
         }
       }
+
+      i.fa {
+        margin-right: .5rem;
+        font-size: 1.5rem;
+      }
     }
 
     .subnav-primary {
+      height: 0;
       opacity: 0;
-      clip-path: rect(0, 0, 0, 0);
+      clip-path: rect(0px, 0px, 0px, 0px);
+      clip: rect(0px, 0px, 0px, 0px);
     }
   }
 }

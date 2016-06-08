@@ -1,14 +1,28 @@
 // General styles
 @import 'assets/scss/variables';
+@import 'assets/scss/mixins';
 @import 'assets/scss/base';
+@import 'assets/scss/grid';
 @import 'assets/scss/layout';
 
 
-// Everywhere components
-@import 'templates/partials/header/header';
+// Packages overrides
+@import 'assets/scss/packages/loginButtons/loginButtons';
 
+
+
+// Everywhere components
+@import 'templates/partials/Header/Header';
+
+// Login components
+@import 'templates/Login/Login';
+
+
+// Dashboard components
+@import 'templates/Dashboard/Dashboard';
 
 // Pricing components
-@import 'templates/pricing/pricing-add/pricing-add';
-@import 'templates/pricing/products/product';
-@import 'templates/pricing/subscriptions/subscription';
+@import 'templates/Pricing/Pricing';
+@import 'templates/Pricing/PricingAdd/PricingAdd';
+@import 'templates/Pricing/Products/Product';
+@import 'templates/Pricing/Products/Subscriptions/Subscription';

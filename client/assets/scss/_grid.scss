@@ -1,0 +1,125 @@
+/**
+* Author: Alexandre Champagne
+* Grid Custom System
+* @dependencies : susy (http://susy.oddbird.net/)
+**/
+@import "/{meta:susy}/susy";
+
+/**
+* Grid settings
+**/
+$grid-columns           : 12;
+$column-width           : 120px;
+$gutter-width           : 30px;
+$layout--medium-width   : 1200px;
+$layout--small-width    : 960px;
+$breakpoints: (
+  xs: 'min-width: 0px',
+  sm: 'min-width: 768px',
+  md: 'min-width: 992px',
+  lg: 'min-width: 1260px'
+);
+
+/**
+* susy grid config map
+**/
+$grid-settings: (
+  columns: $grid-columns,
+  math: fluid,
+  output: float,
+  gutter-position: inside-static,
+  global-box-sizing: border-box,
+  column-width: $column-width,
+  gutters: $gutter-width / $column-width,
+);
+@include layout($grid-settings);
+
+/**
+* Containers for the grid
+* system. Can be extended using
+* BEM modifier conventions
+**/
+.layout {
+  padding-left: $gutter-width / 2;
+  padding-right: $gutter-width / 2;
+
+  &--large,
+  &--medium,
+  &--small {
+    @extend .layout;
+  }
+
+  &--large {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--medium {
+    @include layout($layout--medium-width);
+  }
+
+  &--small {
+    @include layout($layout--small-width);
+  }
+}
+
+/**
+* Containers for the grid
+* system. Can be extended using
+* BEM modifier conventions
+**/
+.row {
+  @include clearfix;
+  margin-left: -$gutter-width / 2;
+  margin-right: -$gutter-width / 2;
+
+  > [class^="col-"] {
+    position: relative;
+    min-height: 1px;
+    padding-left: $gutter-width / 2;
+    padding-right: $gutter-width / 2;
+  }
+}
+
+/**
+* Creates all classes for the column
+* system by looping through all
+* required sizes.
+**/
+@each $size, $query in $breakpoints {
+
+  @media screen and ($query) {
+
+    @for $i from 1 to ($grid-columns + 1) {
+
+      .col-#{$size}-#{$i} {
+        @include span($i);
+      }
+
+      .col-#{$size}-pull-#{$i} {
+        right: ($i / $grid-columns) * 100%;
+      }
+
+      .col-#{$size}-push-#{$i} {
+        left: ($i / $grid-columns) * 100%;
+      }
+
+      .col-#{$size}-offset-#{$i} {
+        margin-left: ($i / $grid-columns) * 100%;
+      }
+    }
+
+    .col-#{$size}-pull-0 {
+      right: auto;
+    }
+
+    .col-#{$size}-push-0 {
+      left: auto;
+    }
+
+    .col-#{$size}-offset-0 {
+      margin-left: 0;
+    }
+  }
+}

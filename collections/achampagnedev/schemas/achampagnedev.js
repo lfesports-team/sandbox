@@ -1,6 +1,6 @@
 import {PricingLocaleSchema} from './pricing-locale.js';
 
-export function LightspeedSchema() {
+export function AchampagneDevSchema() {
   return new SimpleSchema({
     pricing_locale: {
       type: [PricingLocaleSchema()],
