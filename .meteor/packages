@@ -27,6 +27,7 @@ erasaur:meteor-lodash
 fastclick
 zimme:active-route
 #datariot:ganalytics
+check
 
 ### Database
 aldeed:collection2      # SimpleSchema
@@ -34,6 +35,7 @@ aldeed:collection2      # SimpleSchema
 
 ### Security
 gwendall:auth-client-callbacks
+accounts-base
 accounts-password
 accounts-ui
 accounts-google

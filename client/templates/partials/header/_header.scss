@@ -31,6 +31,15 @@ header {
       opacity: 0;
       clip-path: rect(0px, 0px, 0px, 0px);
       clip: rect(0px, 0px, 0px, 0px);
+      transform: translateY(-10px);
+      transition: opacity .24s ease-in-out, transform .24s ease-in-out;
+    }
+
+    .nav-primary__item--withsub:hover .subnav-primary {
+      clip-path: auto;
+      clip: auto;
+      opacity: 1;
+      transform: translateY(0px);
     }
   }
 }

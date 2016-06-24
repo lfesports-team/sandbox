@@ -6,11 +6,12 @@ export function CurrencySchema() {
     },
     symbol: {
       type: String,
-      label: "Currency symbol",
+      label: "Currency symbol"
     },
     before: {
       type: Boolean,
-      label: "Before price"
+      label: "Before price",
+      optional: true
     }
   });
 }

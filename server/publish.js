@@ -1,5 +1,10 @@
 import { Meteor } from 'meteor/meteor';
 
-Meteor.publish('achampagnedev', function() {
-  return AchampagneDev.find();
+Meteor.publish('AchampagneDev', function() {
+  return AchampagneDev.find({});
+});
+
+Meteor.publish('AchampagneDevSingle', function(id) {
+  check(id, String);
+  return AchampagneDev.find({_id: id});
 });

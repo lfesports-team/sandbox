@@ -1,6 +1,14 @@
 <template name="Pricing">
     <section class="pricing">
         <h2 class="view-title">Pricing locales</h2>
-        <!-- Output list -->
+        <section>
+            {{#if Template.subscriptionsReady}}
+                {{#each greetings }}
+                    <a href="/pricing/{{_id}}" class="view-details"><p>{{ greeting }}</p></a>
+                {{/each}}
+            {{else}}
+                <p>Loading...</p>
+            {{/if}}
+        </section>
     </section>
 </template>

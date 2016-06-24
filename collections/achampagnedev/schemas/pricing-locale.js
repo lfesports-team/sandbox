@@ -1,5 +1,7 @@
-import {ContactSchema} from './contact.js';
-import {ProductSchema} from './product.js';
+import { ContactSchema } from './contact.js';
+import { ProductSchema } from './product.js';
+import { CurrencySchema } from './currency.js';
+
 
 export function PricingLocaleSchema() {
   return new SimpleSchema({
@@ -7,13 +9,18 @@ export function PricingLocaleSchema() {
       type: String,
       label: "Locale"
     },
+    currency: {
+      type: CurrencySchema(),
+      label: "Currency"
+    },
     contact: {
       type: ContactSchema(),
       label: "Contact"
     },
     products: {
       type: [ProductSchema()],
-      label: "Products"
+      label: "Product",
+      optional: true
     }
   });
 }

@@ -1,12 +1,8 @@
 <template name="MainLayout">
-    {{#if currentUser }}
+    {{#if currentUser}}
         {{> Header}}
-        <main class="layout--large">
-            {{> Template.dynamic template=main}}
-        </main>
-    {{else}}
-        <main class="layout--large layout--login">
-            {{> Login}}
-        </main>
     {{/if}}
+    <main class="layout--large">
+        {{> Template.dynamic template=main}}
+    </main>
 </template>

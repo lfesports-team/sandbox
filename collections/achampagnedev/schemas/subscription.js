@@ -1,5 +1,5 @@
-import {PricingSchema} from './pricing.js';
-import {FeatureSchema} from './feature.js';
+import { PricingSchema } from './pricing.js';
+import { FeatureSchema } from './feature.js';
 
 export function SubscriptionSchema() {
   return new SimpleSchema({
