@@ -11,3 +11,9 @@ Template.Pricing.helpers({
     return AchampagneDev.find({});
   }
 });
+
+Template.Pricing.events({
+  'click .toggle-menu': function() {
+    Meteor.call('toggleActiveItem', this._id, this.isActive);
+  }
+});

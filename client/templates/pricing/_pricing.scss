@@ -1,0 +1,25 @@
+.pricing {
+
+  &__article {
+
+    .btn-primary {
+      display: block;
+    }
+
+    .btn-deny {
+      display: none;
+    }
+
+    &.is-active {
+      background-color: #f1f1f1;
+
+      .btn-primary {
+        display: none;
+      }
+
+      .btn-deny {
+        display: block;
+      }
+    }
+  }
+}
