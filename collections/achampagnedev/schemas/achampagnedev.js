@@ -8,6 +8,9 @@ export function AchampagneDevSchema() {
     // }
     greeting : {
       type: String
+    },
+    isActive : {
+      type: Boolean
     }
   });
 }

@@ -9,17 +9,18 @@
 // Packages overrides
 @import 'assets/scss/packages/loginButtons/loginButtons';
 
-
-
 // Everywhere components
 @import 'templates/partials/Header/Header';
 
 // Login components
 @import 'templates/Login/Login';
 
-
 // Dashboard components
 @import 'templates/Dashboard/Dashboard';
+
+// Greetings components
+@import 'templates/Greetings/Greetings';
+
 
 // Pricing components
 @import 'templates/Pricing/Pricing';

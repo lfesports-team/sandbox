@@ -1,0 +1,12 @@
+<template name="Greetings">
+    <h2 class="view-title">Active Greetings</h2>
+    {{#if Template.subscriptionsReady}}
+        {{#each greetings }}
+            <article class="pricing__article{{#if isActive}} is-active{{/if}}">
+                <a href="/pricing/{{_id}}" class="view-details"><p>{{ greeting }}</p></a>
+            </article>
+        {{/each}}
+    {{else}}
+        <p>Loading...</p>
+    {{/if}}
+</template>

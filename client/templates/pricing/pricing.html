@@ -1,14 +1,16 @@
 <template name="Pricing">
     <section class="pricing">
         <h2 class="view-title">Pricing locales</h2>
-        <section>
             {{#if Template.subscriptionsReady}}
                 {{#each greetings }}
+                <article class="pricing__article{{#if isActive}} is-active{{/if}}">
                     <a href="/pricing/{{_id}}" class="view-details"><p>{{ greeting }}</p></a>
+                    <button class="btn-primary toggle-menu">Add To Greetings</button>
+                    <button class="btn-deny toggle-menu">Remove From Greetings</button>
+                </article>
                 {{/each}}
             {{else}}
                 <p>Loading...</p>
             {{/if}}
-        </section>
     </section>
 </template>
